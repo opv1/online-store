@@ -1,0 +1,39 @@
+@import 'variables';
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $blackColor;
+  text-decoration: none;
+  cursor: pointer;
+
+  &__image {
+    display: flex;
+    margin-right: 15px;
+
+    img {
+      @include transition(transform, 0.3s);
+
+      display: block;
+    }
+  }
+
+  &__title {
+    font-size: 27px;
+    letter-spacing: 0.68px;
+    text-transform: uppercase;
+    color: $blackColor;
+    font-weight: 300;
+
+    &_last-word {
+      color: $pinkColor;
+      font-weight: 900;
+    }
+  }
+
+  &:hover {
+    img {
+      @include transformRotate(360deg);
+    }
+  }
+}

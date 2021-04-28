@@ -1,0 +1,29 @@
+$blackColor: #222;
+$whiteColor: #fff;
+$pinkColor: #f16d7f;
+$greyColor: #e6e6e6;
+
+@mixin transition($property, $duration) {
+  transition-property: $property;
+  transition-duration: $duration;
+}
+
+@mixin transformScale($scale) {
+  transform: scale($scale);
+}
+
+@mixin transformRotate($degree) {
+  transform: rotate($degree);
+}
+
+@function focusColor($color) {
+  @return darken($color, 2%);
+}
+
+@function hoverColor($color) {
+  @return darken($color, 5%);
+}
+
+@function activeColor($color) {
+  @return darken($color, 10%);
+}

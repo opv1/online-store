@@ -1,0 +1,59 @@
+@import 'variables';
+
+.banner {
+  display: flex;
+  justify-content: center;
+  padding: 65px 0;
+  background-color: #f8f3f4;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+  }
+
+  &-caption {
+    margin: 0;
+    font-family: 'Lato-Black';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $pinkColor;
+  }
+
+  &-container {
+    display: flex;
+  }
+
+  &-navigation {
+    &__list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      a {
+        @include transition(color, 0.3s);
+
+        font-family: 'Lato-Light';
+        font-size: 14px;
+        text-transform: uppercase;
+        color: #636363;
+
+        &:hover {
+          color: $pinkColor;
+        }
+      }
+    }
+
+    &__item_active {
+      a {
+        font-family: 'Lato-Bold';
+        color: $pinkColor;
+      }
+    }
+  }
+}
